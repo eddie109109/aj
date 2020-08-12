@@ -14,18 +14,18 @@ if(isset($_POST['submit'])) { // if the name field of the submit button matches
   $password = FormSanitizer::sanitizeFormUsername($_POST["password"]);
   // default userName = ajhair
   // default password = 123456
-  // $password = hash("sha512",$password); // hash the password
-  // $query =$conn->prepare("INSERT INTO Users (id,userName,password)VALUES (NULL,:userName, :password)");
-  // $query->bindParam(":userName", $userName);
-  // $query->bindParam(":password", $password);
-  // $query->execute();
+  $password = hash("sha512",$password); // hash the password
+  $query =$conn->prepare("INSERT INTO Users (id,userName,password)VALUES (NULL,:userName, :password)");
+  $query->bindParam(":userName", $userName);
+  $query->bindParam(":password", $password);
+  $query->execute();
 
-  $wasSuccessful = $accountObj->userSignIn($userName,$password);
-  if ($wasSuccessful) {
-    header("Location: staffPage.php");
-  } else {
-    echo "Failed to sign in"; // if any of the input is not matching, print out to the user
-  }
+  // $wasSuccessful = $accountObj->userSignIn($userName,$password);
+  // if ($wasSuccessful) {
+  //   header("Location: staffPage.php");
+  // } else {
+  //   echo "Failed to sign in"; // if any of the input is not matching, print out to the user
+  // }
 
 }
 
