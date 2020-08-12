@@ -1,0 +1,111 @@
+
+. {
+  /* background-image: url("../img/background.jpg"); */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* the box include the margin and padding */
+  height: 100%;
+  min-height: 100%;
+}
+
+
+header {
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  background: #000;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s; /* make the header flash */
+  padding: 5px;
+  z-index: 10000;
+}
+
+body {
+  min-height: 200vh;
+  /* background: url("../img/background.jpg"); */
+}
+
+header .logo {
+  position: relative;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  transition: 0.6s;
+
+}
+
+header ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 10px 15px;
+}
+
+header ul li {
+  position: relative;
+  list-style: none;
+
+}
+
+header ul li a {
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 500;
+  transition: 0.6s;
+}
+
+
+header.sticky {
+
+  background: #fff;
+}
+
+header.sticky .logo,
+header.sticky ul li a {
+  color: #000;
+}
+
+.wrapper {
+  position: absolute;
+}
+
+div.staffLoginForm {
+  display: block;
+  text-align: center;
+
+}
+
+form
+{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.g {
+  background-color: yellow;
+  /* text-align: center;   */
+  /* display: flex; */
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
